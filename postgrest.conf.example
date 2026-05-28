@@ -1,0 +1,6 @@
+db-uri        = "postgres://authenticator:PASSWORD_ANDA@localhost:5432/db_postgrest"
+db-schemas    = "api"
+db-anon-role  = "web_anon"
+db-pool       = 10
+server-host   = "!4"
+server-port   = 3000

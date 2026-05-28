@@ -1,0 +1,8 @@
+cat > .gitignore << 'EOF'
+postgrest.conf
+.env
+*.env
+.DS_Store
+*.log
+node_modules/
+EOF
