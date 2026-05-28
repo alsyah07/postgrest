@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS api.tb_users (
     username    VARCHAR(50)  UNIQUE NOT NULL,
     email       VARCHAR(100) UNIQUE NOT NULL,
     password    VARCHAR(255) NOT NULL,
+    no_hp       VARCHAR(20)  DEFAULT NULL,  
     status      SMALLINT     DEFAULT 1 CHECK (status IN (0, 1)),
     created_at  TIMESTAMPTZ  DEFAULT NOW(),
     updated_at  TIMESTAMPTZ  DEFAULT NOW()
@@ -26,3 +27,4 @@ CREATE TRIGGER trg_tb_users_updated_at
 GRANT USAGE ON SCHEMA api TO web_anon;
 GRANT SELECT, INSERT, UPDATE, DELETE ON api.tb_users TO web_anon;
 GRANT USAGE, SELECT ON SEQUENCE api.tb_users_id_seq TO web_anon;
+
