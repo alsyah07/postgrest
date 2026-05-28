@@ -1,0 +1,2 @@
+ALTER TABLE api.tb_users
+ADD COLUMN no_hp VARCHAR(20) DEFAULT NULL;
